@@ -1,0 +1,14 @@
+name: Hello DevOps CI
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run Hello Script
+        run: |
+          python3 hello.py
